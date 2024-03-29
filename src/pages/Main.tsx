@@ -7,7 +7,7 @@ const Main = () => {
     <MainContainer>
       <Header>Zacomm</Header>
       <Banner />
-      <Stack direction="row" spacing={4} style={{ marginTop: '40px' }}>
+      <Stack direction="row" spacing={6} style={{ marginTop: '40px' }}>
         <Board />
         <Trending></Trending>
       </Stack>
