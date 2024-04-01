@@ -1,18 +1,42 @@
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
-import Main from './pages/Main';
 import './App.css';
+import styled from 'styled-components';
 import { StyledEngineProvider } from '@mui/styled-engine';
+import Main from './pages/Main';
+import Post from './pages/Post';
 
 function App() {
   return (
     <StyledEngineProvider injectFirst>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Main />}></Route>
-        </Routes>
-      </BrowserRouter>
+      <MainContainer>
+        <BrowserRouter>
+          <Header>Zacomm</Header>
+          <Banner />
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/post" element={<Post />} />
+          </Routes>
+        </BrowserRouter>
+      </MainContainer>
     </StyledEngineProvider>
   );
 }
 
 export default App;
+
+const MainContainer = styled.div`
+  max-width: 1440px;
+  margin-inline: auto;
+`;
+
+const Header = styled.div`
+  height: 85px;
+  align-content: center;
+`;
+
+const Banner = styled.div`
+  height: 335px;
+  border-radius: 30px;
+  background-color: #edfaf7;
+  margin-bottom: 40px;
+`;

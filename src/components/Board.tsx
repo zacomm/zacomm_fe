@@ -4,8 +4,11 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ChatIcon from '@mui/icons-material/Chat';
 import { Stack, styled as MUIStyled } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const Board = () => {
+  const navigate = useNavigate();
+
   return (
     <BoardContainer>
       <TitleContainer>
@@ -20,7 +23,7 @@ const Board = () => {
           </Stack>
         </Stack>
       </TitleContainer>
-      <Body>
+      <Body onClick={() => navigate('/post')}>
         <Stack direction="row">
           <Category>프로야구</Category>
           <div>롯데 제발 올해는 </div>
@@ -39,7 +42,7 @@ const Board = () => {
 export default Board;
 
 const BoardContainer = styled.div`
-  margin-top: 40px;
+  width: 100%;
 `;
 
 const TitleContainer = styled.div`
