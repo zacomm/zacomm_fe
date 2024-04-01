@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import Board from '../components/Board';
+import Post from '../components/Post';
 import { Stack, styled as MUIStyled } from '@mui/material';
 
 const Main = () => {
   return (
     <BodyContainer direction="row" spacing={6}>
-      <Board />
+      <Post />
       <Trending />
     </BodyContainer>
   );

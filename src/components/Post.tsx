@@ -6,13 +6,13 @@ import ChatIcon from '@mui/icons-material/Chat';
 import { Stack, styled as MUIStyled } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-const Board = () => {
+const Post = () => {
   const navigate = useNavigate();
 
   return (
     <BoardContainer>
       <TitleContainer>
-        <Stack direction="row">
+        <Stack direction="row" style={{ justifyContent: 'space-between' }}>
           <Title direction="row">
             <StarIcon />
             <span>토픽 베스트</span>
@@ -39,7 +39,7 @@ const Board = () => {
   );
 };
 
-export default Board;
+export default Post;
 
 const BoardContainer = styled.div`
   width: 100%;
