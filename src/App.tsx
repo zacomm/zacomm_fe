@@ -11,7 +11,6 @@ function App() {
       <MainContainer>
         <BrowserRouter>
           <Header>Zacomm</Header>
-          <Banner />
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/post" element={<Post />} />
@@ -32,11 +31,4 @@ const MainContainer = styled.div`
 const Header = styled.div`
   height: 85px;
   align-content: center;
-`;
-
-const Banner = styled.div`
-  height: 335px;
-  border-radius: 30px;
-  background-color: #edfaf7;
-  margin-bottom: 40px;
 `;
